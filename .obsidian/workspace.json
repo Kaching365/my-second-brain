@@ -1,0 +1,195 @@
+{
+  "main": {
+    "id": "58089f39ce016846",
+    "type": "split",
+    "children": [
+      {
+        "id": "a8504f5877f670d6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d8fe9522a395558b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_Wiki/Topics/Digital Content Creation/AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "34f07c9ea66719a6",
+    "type": "split",
+    "children": [
+      {
+        "id": "23917beab89a7fa5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a91316c11426e83f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "deb6cbd1032fae75",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "3a9f9773e73da413",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fcad7740ecbc80ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "9536285129dea2ed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50ba61d548d9c1fb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "10_Wiki/Topics/Digital Content Creation/AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드 의 백링크"
+            }
+          },
+          {
+            "id": "10c5de649cc3fdbd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "10_Wiki/Topics/Digital Content Creation/AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드 의 나가는 링크"
+            }
+          },
+          {
+            "id": "3515914c8561f396",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "e41a777b8930ea03",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "모든 속성"
+            }
+          },
+          {
+            "id": "c3cf2d570078ca8b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "10_Wiki/Topics/Digital Content Creation/AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false,
+      "bases:새 베이스 생성하기": false
+    }
+  },
+  "active": "a91316c11426e83f",
+  "lastOpenFiles": [
+    "00_Raw/햄로그_Group.md",
+    "00_Raw/햄로그_Group.txt",
+    "00_Raw/전자책.txt",
+    "10_Wiki/Projects/AI Content Generation Pipelines/End-to-End_AI_Book_Creation_and_Market_Validation_Pipeline.md",
+    "00_Raw/AI로 로맨스 소설쓰기.pdf",
+    "10_Wiki/Topics/Creative Writing/Web Novels/AI_기반_웹소설_작가_통합_워크북_및_실전_가이드.md"
+  ]
+}

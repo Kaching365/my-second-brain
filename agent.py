@@ -5,6 +5,7 @@ import uuid
 from datetime import datetime
 import subprocess
 import sys
+import fitz  # PyMuPDF for PDF decoding
 from watchdog.observers import Observer
 
 # Set stdout to utf-8 to prevent Windows cp949 errors
@@ -29,6 +30,9 @@ for d in [RAW_DIR, WIKI_DIR, META_DIR, ".github"]:
 
 # Connect to Local LM Studio (Gemma 4)
 client = OpenAI(base_url=LM_STUDIO_API_BASE, api_key="lm-studio")
+
+# Cache to prevent repetitive processing on renames
+PROCESSED_FILES = set()
 
 # ==========================================
 # 🧠 LLM System Prompt Template
@@ -63,6 +67,10 @@ User's Raw Note:
 # 🚀 Processing Logic
 # ==========================================
 def process_file(filepath):
+    if filepath in PROCESSED_FILES:
+        return
+    PROCESSED_FILES.add(filepath)
+    
     # Wait briefly to ensure file copying is complete before reading
     time.sleep(1)
     
@@ -74,8 +82,36 @@ def process_file(filepath):
 
     print(f"\n[👀 File Detected] Processing: {filename}...")
     
-    with open(filepath, "r", encoding="utf-8") as f:
-        raw_text = f.read()
+    raw_text = ""
+    try:
+        if filepath.lower().endswith('.pdf'):
+            doc = fitz.open(filepath)
+            for page in doc:
+                raw_text += page.get_text()
+            
+            # Context length protection for Gemma (truncate to ~30,000 characters)
+            if len(raw_text) > 30000:
+                print("[⚠️ Warning] PDF is very long. Truncating text to prevent context overload.")
+                raw_text = raw_text[:30000] + "\n...[TRUNCATED_DUE_TO_LENGTH]..."
+        else:
+            with open(filepath, "r", encoding="utf-8") as f:
+                raw_text = f.read()
+                
+        # Auto-rename .txt to .md locally in 00_Raw for Obsidian compatibility
+        if filepath.lower().endswith('.txt'):
+            new_filepath = filepath[:-4] + '.md'
+            PROCESSED_FILES.add(new_filepath) # Prevent watchdog recursion
+            new_filename = os.path.basename(new_filepath)
+            os.rename(filepath, new_filepath)
+            print(f"[🔄 Auto-Rename] {filename} -> {new_filename} (For Obsidian)")
+            filepath = new_filepath
+            filename = new_filename
+            if raw_source_path.endswith(".txt"):
+                raw_source_path = raw_source_path[:-4] + ".md"
+                
+    except Exception as read_ex:
+        print(f"[❌ Error] Failed to read {filename}: {read_ex}")
+        return
 
     try:
         # Call Gemma 4 via Local LM Studio API
@@ -172,8 +208,8 @@ class RawFolderWatcher(FileSystemEventHandler):
     def on_created(self, event):
         if not event.is_directory:
             filepath = event.src_path
-            # Analyze text and markdown only
-            if filepath.endswith(".md") or filepath.endswith(".txt"):
+            # Analyze text, markdown, and pdf files
+            if filepath.lower().endswith((".md", ".txt", ".pdf")):
                 process_file(filepath)
 
 if __name__ == "__main__":
