@@ -1,0 +1,463 @@
+2025-08-21T15:19:59.238Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-21T15:19:59.261Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      [length]: 4
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\Calibre2\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 25
+    ]
+  }
+} %o
+2025-08-21T15:19:59.266Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-21T15:19:59.269Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+Knowledge Graph MCP Server running on stdio
+2025-08-21T15:20:00.854Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"memory-server","version":"0.6.3"}}} { metadata: undefined }
+2025-08-21T15:20:00.854Z [memory] [info] Message from client: {"method":"notifications/initialized","jsonrpc":"2.0"} { metadata: undefined }
+2025-08-21T15:20:00.856Z [memory] [info] Message from client: {"method":"tools/list","params":{},"jsonrpc":"2.0","id":1} { metadata: undefined }
+2025-08-21T15:20:00.857Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":2} { metadata: undefined }
+2025-08-21T15:20:00.857Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"create_entities","description":"Create multiple new entities in the knowledge graph","inputSchema":{"type":"object","properties":{"entities":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the entity"},"entityType":{"type":"string","description":"The type of the entity"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observation contents associated with the entity"}},"required":["name","entityType","observations"]}}},"required":["entities"]}},{"name":"create_relations","description":"Create multiple new relations between entities in the knowledge graph. Relations should be in active voice","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]}}},"required":["relations"]}},{"name":"add_observations","description":"Add new observations to existing entities in the knowledge graph","inputSchema":{"type":"object","properties":{"observations":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity to add the observations to"},"contents":{"type":"array","items":{"type":"string"},"description":"An array of observation contents to add"}},"required":["entityName","contents"]}}},"required":["observations"]}},{"name":"delete_entities","description":"Delete multiple entities and their associated relations from the knowledge graph","inputSchema":{"type":"object","properties":{"entityNames":{"type":"array","items":{"type":"string"},"description":"An array of entity names to delete"}},"required":["entityNames"]}},{"name":"delete_observations","description":"Delete specific observations from entities in the knowledge graph","inputSchema":{"type":"object","properties":{"deletions":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity containing the observations"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observations to delete"}},"required":["entityName","observations"]}}},"required":["deletions"]}},{"name":"delete_relations","description":"Delete multiple relations from the knowledge graph","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]},"description":"An array of relations to delete"}},"required":["relations"]}},{"name":"read_graph","description":"Read the entire knowledge graph","inputSchema":{"type":"object","properties":{}}},{"name":"search_nodes","description":"Search for nodes in the knowledge graph based on a query","inputSchema":{"type":"object","properties":{"query":{"type":"string","description":"The search query to match against entity names, types, and observation content"}},"required":["query"]}},{"name":"open_nodes","description":"Open specific nodes in the knowledge graph by their names","inputSchema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"An array of entity names to retrieve"}},"required":["names"]}}]}} { metadata: undefined }
+2025-08-21T15:20:00.858Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":2,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-21T15:20:00.866Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":3} { metadata: undefined }
+2025-08-21T15:20:00.866Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":3,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-21T15:20:01.093Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":4} { metadata: undefined }
+2025-08-21T15:20:01.093Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":4,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-21T15:20:01.115Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":5} { metadata: undefined }
+2025-08-21T15:20:01.116Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":5,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-21T15:20:52.813Z [memory] [info] Server transport closed { metadata: undefined }
+2025-08-21T15:20:52.814Z [memory] [info] Client transport closed { metadata: undefined }
+2025-08-21T15:20:52.814Z [memory] [info] Server transport closed unexpectedly, this is likely due to the process exiting early. If you are developing this MCP server you can add output to stderr (i.e. `console.error('...')` in JavaScript, `print('...', file=sys.stderr)` in python) and it will appear in this log. { metadata: undefined }
+2025-08-21T15:20:52.814Z [memory] [error] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging) { metadata: { context: 'connection', stack: undefined } }
+2025-08-21T15:20:52.814Z [memory] [info] Client transport closed { metadata: undefined }
+2025-08-24T06:07:42.431Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-24T06:07:42.450Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      [length]: 4
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\Calibre2\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\.local\\bin',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 26
+    ]
+  }
+} %o
+2025-08-24T06:07:42.455Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-24T06:07:42.559Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+Knowledge Graph MCP Server running on stdio
+2025-08-24T06:07:47.735Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"memory-server","version":"0.6.3"}}} { metadata: undefined }
+2025-08-24T06:07:47.736Z [memory] [info] Message from client: {"method":"notifications/initialized","jsonrpc":"2.0"} { metadata: undefined }
+2025-08-24T06:07:47.744Z [memory] [info] Message from client: {"method":"tools/list","params":{},"jsonrpc":"2.0","id":1} { metadata: undefined }
+2025-08-24T06:07:47.744Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":2} { metadata: undefined }
+2025-08-24T06:07:47.745Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"create_entities","description":"Create multiple new entities in the knowledge graph","inputSchema":{"type":"object","properties":{"entities":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the entity"},"entityType":{"type":"string","description":"The type of the entity"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observation contents associated with the entity"}},"required":["name","entityType","observations"]}}},"required":["entities"]}},{"name":"create_relations","description":"Create multiple new relations between entities in the knowledge graph. Relations should be in active voice","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]}}},"required":["relations"]}},{"name":"add_observations","description":"Add new observations to existing entities in the knowledge graph","inputSchema":{"type":"object","properties":{"observations":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity to add the observations to"},"contents":{"type":"array","items":{"type":"string"},"description":"An array of observation contents to add"}},"required":["entityName","contents"]}}},"required":["observations"]}},{"name":"delete_entities","description":"Delete multiple entities and their associated relations from the knowledge graph","inputSchema":{"type":"object","properties":{"entityNames":{"type":"array","items":{"type":"string"},"description":"An array of entity names to delete"}},"required":["entityNames"]}},{"name":"delete_observations","description":"Delete specific observations from entities in the knowledge graph","inputSchema":{"type":"object","properties":{"deletions":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity containing the observations"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observations to delete"}},"required":["entityName","observations"]}}},"required":["deletions"]}},{"name":"delete_relations","description":"Delete multiple relations from the knowledge graph","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]},"description":"An array of relations to delete"}},"required":["relations"]}},{"name":"read_graph","description":"Read the entire knowledge graph","inputSchema":{"type":"object","properties":{}}},{"name":"search_nodes","description":"Search for nodes in the knowledge graph based on a query","inputSchema":{"type":"object","properties":{"query":{"type":"string","description":"The search query to match against entity names, types, and observation content"}},"required":["query"]}},{"name":"open_nodes","description":"Open specific nodes in the knowledge graph by their names","inputSchema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"An array of entity names to retrieve"}},"required":["names"]}}]}} { metadata: undefined }
+2025-08-24T06:07:47.746Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":2,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:07:47.763Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":3} { metadata: undefined }
+2025-08-24T06:07:47.764Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":3,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:07:48.123Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":4} { metadata: undefined }
+2025-08-24T06:07:48.124Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":4,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:07:48.129Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":5} { metadata: undefined }
+2025-08-24T06:07:48.130Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":5,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:17:48.862Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":6} { metadata: undefined }
+2025-08-24T06:17:48.867Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":6,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:17:48.877Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":7} { metadata: undefined }
+2025-08-24T06:17:48.880Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":7,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:24:03.961Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-24T06:24:03.986Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      [length]: 4
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\Calibre2\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\.local\\bin',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 26
+    ]
+  }
+} %o
+2025-08-24T06:24:03.991Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-24T06:24:03.993Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+Knowledge Graph MCP Server running on stdio
+2025-08-24T06:24:05.622Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"memory-server","version":"0.6.3"}}} { metadata: undefined }
+2025-08-24T06:24:05.633Z [memory] [info] Message from client: {"method":"notifications/initialized","jsonrpc":"2.0"} { metadata: undefined }
+2025-08-24T06:24:05.643Z [memory] [info] Message from client: {"method":"tools/list","params":{},"jsonrpc":"2.0","id":1} { metadata: undefined }
+2025-08-24T06:24:05.643Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":2} { metadata: undefined }
+2025-08-24T06:24:05.644Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"create_entities","description":"Create multiple new entities in the knowledge graph","inputSchema":{"type":"object","properties":{"entities":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the entity"},"entityType":{"type":"string","description":"The type of the entity"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observation contents associated with the entity"}},"required":["name","entityType","observations"]}}},"required":["entities"]}},{"name":"create_relations","description":"Create multiple new relations between entities in the knowledge graph. Relations should be in active voice","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]}}},"required":["relations"]}},{"name":"add_observations","description":"Add new observations to existing entities in the knowledge graph","inputSchema":{"type":"object","properties":{"observations":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity to add the observations to"},"contents":{"type":"array","items":{"type":"string"},"description":"An array of observation contents to add"}},"required":["entityName","contents"]}}},"required":["observations"]}},{"name":"delete_entities","description":"Delete multiple entities and their associated relations from the knowledge graph","inputSchema":{"type":"object","properties":{"entityNames":{"type":"array","items":{"type":"string"},"description":"An array of entity names to delete"}},"required":["entityNames"]}},{"name":"delete_observations","description":"Delete specific observations from entities in the knowledge graph","inputSchema":{"type":"object","properties":{"deletions":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity containing the observations"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observations to delete"}},"required":["entityName","observations"]}}},"required":["deletions"]}},{"name":"delete_relations","description":"Delete multiple relations from the knowledge graph","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]},"description":"An array of relations to delete"}},"required":["relations"]}},{"name":"read_graph","description":"Read the entire knowledge graph","inputSchema":{"type":"object","properties":{}}},{"name":"search_nodes","description":"Search for nodes in the knowledge graph based on a query","inputSchema":{"type":"object","properties":{"query":{"type":"string","description":"The search query to match against entity names, types, and observation content"}},"required":["query"]}},{"name":"open_nodes","description":"Open specific nodes in the knowledge graph by their names","inputSchema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"An array of entity names to retrieve"}},"required":["names"]}}]}} { metadata: undefined }
+2025-08-24T06:24:05.644Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":2,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:24:05.664Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":3} { metadata: undefined }
+2025-08-24T06:24:05.665Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":3,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:33:15.751Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-24T06:33:15.763Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      [length]: 4
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\Calibre2\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\.local\\bin',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 26
+    ]
+  }
+} %o
+2025-08-24T06:33:15.768Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-24T06:33:15.787Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+Knowledge Graph MCP Server running on stdio
+2025-08-24T06:33:16.911Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"memory-server","version":"0.6.3"}}} { metadata: undefined }
+2025-08-24T06:33:16.960Z [memory] [info] Message from client: {"method":"notifications/initialized","jsonrpc":"2.0"} { metadata: undefined }
+2025-08-24T06:33:16.989Z [memory] [info] Message from client: {"method":"tools/list","params":{},"jsonrpc":"2.0","id":1} { metadata: undefined }
+2025-08-24T06:33:16.990Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":2} { metadata: undefined }
+2025-08-24T06:33:16.991Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"create_entities","description":"Create multiple new entities in the knowledge graph","inputSchema":{"type":"object","properties":{"entities":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the entity"},"entityType":{"type":"string","description":"The type of the entity"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observation contents associated with the entity"}},"required":["name","entityType","observations"]}}},"required":["entities"]}},{"name":"create_relations","description":"Create multiple new relations between entities in the knowledge graph. Relations should be in active voice","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]}}},"required":["relations"]}},{"name":"add_observations","description":"Add new observations to existing entities in the knowledge graph","inputSchema":{"type":"object","properties":{"observations":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity to add the observations to"},"contents":{"type":"array","items":{"type":"string"},"description":"An array of observation contents to add"}},"required":["entityName","contents"]}}},"required":["observations"]}},{"name":"delete_entities","description":"Delete multiple entities and their associated relations from the knowledge graph","inputSchema":{"type":"object","properties":{"entityNames":{"type":"array","items":{"type":"string"},"description":"An array of entity names to delete"}},"required":["entityNames"]}},{"name":"delete_observations","description":"Delete specific observations from entities in the knowledge graph","inputSchema":{"type":"object","properties":{"deletions":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity containing the observations"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observations to delete"}},"required":["entityName","observations"]}}},"required":["deletions"]}},{"name":"delete_relations","description":"Delete multiple relations from the knowledge graph","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]},"description":"An array of relations to delete"}},"required":["relations"]}},{"name":"read_graph","description":"Read the entire knowledge graph","inputSchema":{"type":"object","properties":{}}},{"name":"search_nodes","description":"Search for nodes in the knowledge graph based on a query","inputSchema":{"type":"object","properties":{"query":{"type":"string","description":"The search query to match against entity names, types, and observation content"}},"required":["query"]}},{"name":"open_nodes","description":"Open specific nodes in the knowledge graph by their names","inputSchema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"An array of entity names to retrieve"}},"required":["names"]}}]}} { metadata: undefined }
+2025-08-24T06:33:16.992Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":2,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:33:17.036Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":3} { metadata: undefined }
+2025-08-24T06:33:17.038Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":3,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:33:17.052Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":4} { metadata: undefined }
+2025-08-24T06:33:17.053Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":4,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:33:17.092Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":5} { metadata: undefined }
+2025-08-24T06:33:17.094Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":5,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:33:21.209Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":6} { metadata: undefined }
+2025-08-24T06:33:21.210Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":6,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:33:21.246Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":7} { metadata: undefined }
+2025-08-24T06:33:21.247Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":7,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:43:21.858Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":8} { metadata: undefined }
+2025-08-24T06:43:21.860Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":8,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:43:21.861Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":9} { metadata: undefined }
+2025-08-24T06:43:21.861Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":9,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:53:21.863Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":10} { metadata: undefined }
+2025-08-24T06:53:21.868Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":10,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T06:53:21.877Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":11} { metadata: undefined }
+2025-08-24T06:53:21.878Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":11,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:03:21.213Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":12} { metadata: undefined }
+2025-08-24T07:03:21.215Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":12,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:03:21.220Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":13} { metadata: undefined }
+2025-08-24T07:03:21.220Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":13,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:03:41.136Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":14} { metadata: undefined }
+2025-08-24T07:03:41.137Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":14,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:03:43.166Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":15} { metadata: undefined }
+2025-08-24T07:03:43.167Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":15,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:03:50.843Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":16} { metadata: undefined }
+2025-08-24T07:03:50.843Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":16,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:03:50.866Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":17} { metadata: undefined }
+2025-08-24T07:03:50.867Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":17,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:13:02.358Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-24T07:13:02.371Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      [length]: 4
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\.local\\bin',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 25
+    ]
+  }
+} %o
+2025-08-24T07:13:02.376Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-24T07:13:02.392Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+Knowledge Graph MCP Server running on stdio
+2025-08-24T07:13:03.432Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"memory-server","version":"0.6.3"}}} { metadata: undefined }
+2025-08-24T07:13:03.433Z [memory] [info] Message from client: {"method":"notifications/initialized","jsonrpc":"2.0"} { metadata: undefined }
+2025-08-24T07:13:03.437Z [memory] [info] Message from client: {"method":"tools/list","params":{},"jsonrpc":"2.0","id":1} { metadata: undefined }
+2025-08-24T07:13:03.437Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":2} { metadata: undefined }
+2025-08-24T07:13:03.438Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"create_entities","description":"Create multiple new entities in the knowledge graph","inputSchema":{"type":"object","properties":{"entities":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the entity"},"entityType":{"type":"string","description":"The type of the entity"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observation contents associated with the entity"}},"required":["name","entityType","observations"]}}},"required":["entities"]}},{"name":"create_relations","description":"Create multiple new relations between entities in the knowledge graph. Relations should be in active voice","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]}}},"required":["relations"]}},{"name":"add_observations","description":"Add new observations to existing entities in the knowledge graph","inputSchema":{"type":"object","properties":{"observations":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity to add the observations to"},"contents":{"type":"array","items":{"type":"string"},"description":"An array of observation contents to add"}},"required":["entityName","contents"]}}},"required":["observations"]}},{"name":"delete_entities","description":"Delete multiple entities and their associated relations from the knowledge graph","inputSchema":{"type":"object","properties":{"entityNames":{"type":"array","items":{"type":"string"},"description":"An array of entity names to delete"}},"required":["entityNames"]}},{"name":"delete_observations","description":"Delete specific observations from entities in the knowledge graph","inputSchema":{"type":"object","properties":{"deletions":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity containing the observations"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observations to delete"}},"required":["entityName","observations"]}}},"required":["deletions"]}},{"name":"delete_relations","description":"Delete multiple relations from the knowledge graph","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]},"description":"An array of relations to delete"}},"required":["relations"]}},{"name":"read_graph","description":"Read the entire knowledge graph","inputSchema":{"type":"object","properties":{}}},{"name":"search_nodes","description":"Search for nodes in the knowledge graph based on a query","inputSchema":{"type":"object","properties":{"query":{"type":"string","description":"The search query to match against entity names, types, and observation content"}},"required":["query"]}},{"name":"open_nodes","description":"Open specific nodes in the knowledge graph by their names","inputSchema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"An array of entity names to retrieve"}},"required":["names"]}}]}} { metadata: undefined }
+2025-08-24T07:13:03.438Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":2,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:13:03.449Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":3} { metadata: undefined }
+2025-08-24T07:13:03.449Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":3,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:13:03.612Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":4} { metadata: undefined }
+2025-08-24T07:13:03.612Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":4,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:13:03.641Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":5} { metadata: undefined }
+2025-08-24T07:13:03.642Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":5,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:19:48.842Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-24T07:19:48.856Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      [length]: 4
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\.local\\bin',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 25
+    ]
+  }
+} %o
+2025-08-24T07:19:48.861Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-24T07:19:48.881Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+Knowledge Graph MCP Server running on stdio
+2025-08-24T07:19:49.883Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{}},"serverInfo":{"name":"memory-server","version":"0.6.3"}}} { metadata: undefined }
+2025-08-24T07:19:49.884Z [memory] [info] Message from client: {"method":"notifications/initialized","jsonrpc":"2.0"} { metadata: undefined }
+2025-08-24T07:19:49.886Z [memory] [info] Message from client: {"method":"tools/list","params":{},"jsonrpc":"2.0","id":1} { metadata: undefined }
+2025-08-24T07:19:49.887Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":2} { metadata: undefined }
+2025-08-24T07:19:49.887Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":1,"result":{"tools":[{"name":"create_entities","description":"Create multiple new entities in the knowledge graph","inputSchema":{"type":"object","properties":{"entities":{"type":"array","items":{"type":"object","properties":{"name":{"type":"string","description":"The name of the entity"},"entityType":{"type":"string","description":"The type of the entity"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observation contents associated with the entity"}},"required":["name","entityType","observations"]}}},"required":["entities"]}},{"name":"create_relations","description":"Create multiple new relations between entities in the knowledge graph. Relations should be in active voice","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]}}},"required":["relations"]}},{"name":"add_observations","description":"Add new observations to existing entities in the knowledge graph","inputSchema":{"type":"object","properties":{"observations":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity to add the observations to"},"contents":{"type":"array","items":{"type":"string"},"description":"An array of observation contents to add"}},"required":["entityName","contents"]}}},"required":["observations"]}},{"name":"delete_entities","description":"Delete multiple entities and their associated relations from the knowledge graph","inputSchema":{"type":"object","properties":{"entityNames":{"type":"array","items":{"type":"string"},"description":"An array of entity names to delete"}},"required":["entityNames"]}},{"name":"delete_observations","description":"Delete specific observations from entities in the knowledge graph","inputSchema":{"type":"object","properties":{"deletions":{"type":"array","items":{"type":"object","properties":{"entityName":{"type":"string","description":"The name of the entity containing the observations"},"observations":{"type":"array","items":{"type":"string"},"description":"An array of observations to delete"}},"required":["entityName","observations"]}}},"required":["deletions"]}},{"name":"delete_relations","description":"Delete multiple relations from the knowledge graph","inputSchema":{"type":"object","properties":{"relations":{"type":"array","items":{"type":"object","properties":{"from":{"type":"string","description":"The name of the entity where the relation starts"},"to":{"type":"string","description":"The name of the entity where the relation ends"},"relationType":{"type":"string","description":"The type of the relation"}},"required":["from","to","relationType"]},"description":"An array of relations to delete"}},"required":["relations"]}},{"name":"read_graph","description":"Read the entire knowledge graph","inputSchema":{"type":"object","properties":{}}},{"name":"search_nodes","description":"Search for nodes in the knowledge graph based on a query","inputSchema":{"type":"object","properties":{"query":{"type":"string","description":"The search query to match against entity names, types, and observation content"}},"required":["query"]}},{"name":"open_nodes","description":"Open specific nodes in the knowledge graph by their names","inputSchema":{"type":"object","properties":{"names":{"type":"array","items":{"type":"string"},"description":"An array of entity names to retrieve"}},"required":["names"]}}]}} { metadata: undefined }
+2025-08-24T07:19:49.888Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":2,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:19:49.890Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":3} { metadata: undefined }
+2025-08-24T07:19:49.891Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":3,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:19:50.070Z [memory] [info] Message from client: {"method":"resources/list","params":{},"jsonrpc":"2.0","id":4} { metadata: undefined }
+2025-08-24T07:19:50.071Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":4,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:19:50.076Z [memory] [info] Message from client: {"method":"prompts/list","params":{},"jsonrpc":"2.0","id":5} { metadata: undefined }
+2025-08-24T07:19:50.077Z [memory] [info] Message from server: {"jsonrpc":"2.0","id":5,"error":{"code":-32601,"message":"Method not found"}} { metadata: undefined }
+2025-08-24T07:28:35.623Z [memory] [info] Client transport closed { metadata: undefined }
+2025-08-24T07:28:35.624Z [memory] [info] Server transport closed { metadata: undefined }
+2025-08-24T07:28:35.624Z [memory] [info] Client transport closed { metadata: undefined }
+2025-08-24T07:28:35.624Z [memory] [info] Server transport closed (intentional shutdown) { metadata: undefined }
+2025-08-24T07:28:35.624Z [memory] [info] Client transport closed { metadata: undefined }
+2025-08-24T07:28:35.623Z [memory] [info] Shutting down server... { metadata: undefined }
+2025-08-24T07:28:35.652Z [memory] [info] Server transport closed { metadata: undefined }
+2025-08-24T07:28:35.652Z [memory] [info] Client transport closed { metadata: undefined }
+2025-08-24T07:28:35.656Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-24T07:28:35.687Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      [length]: 4
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\.local\\bin',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 25
+    ]
+  }
+} %o
+2025-08-24T07:28:35.692Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-24T07:28:35.699Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+2025-08-24T07:28:56.307Z [memory] [info] Initializing server... { metadata: undefined }
+2025-08-24T07:28:56.327Z [memory] [info] Using MCP server command: C:\WINDOWS\System32\cmd.exe with args and path: {
+  metadata: {
+    args: [
+      '/C',
+      'C:\\Program Files\\nodejs\\npx.cmd',
+      '-y',
+      '@modelcontextprotocol/server-memory',
+      '--root',
+      'C:\\Users\\computer\\Documents\\Obsidian Vault',
+      [length]: 6
+    ],
+    paths: [
+      'C:\\Program Files\\nodejs',
+      'C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\redist\\intel64\\compiler',
+      'C:\\Windows\\system32',
+      'C:\\Windows',
+      'C:\\Windows\\System32\\Wbem',
+      'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\Windows\\System32\\OpenSSH\\',
+      'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common',
+      'C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR',
+      'C:\\Program Files\\Bandizip\\',
+      'C:\\WINDOWS\\system32',
+      'C:\\WINDOWS',
+      'C:\\WINDOWS\\System32\\Wbem',
+      'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\',
+      'C:\\WINDOWS\\System32\\OpenSSH\\',
+      'C:\\Program Files\\Pandoc\\',
+      'C:\\Program Files\\nodejs\\',
+      'C:\\Program Files\\Git\\cmd',
+      'C:\\Users\\computer\\.local\\bin',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Python313\\',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\Python\\Launcher\\',
+      'C:\\Users\\computer\\AppData\\Local\\Microsoft\\WindowsApps',
+      'C:\\Users\\computer\\AppData\\Roaming\\npm',
+      'C:\\Users\\computer\\AppData\\Local\\Programs\\cursor\\resources\\app\\bin',
+      [length]: 25
+    ]
+  }
+} %o
+2025-08-24T07:28:56.331Z [memory] [info] Server started and connected successfully { metadata: undefined }
+2025-08-24T07:28:56.343Z [memory] [info] Message from client: {"method":"initialize","params":{"protocolVersion":"2025-06-18","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0} { metadata: undefined }
+'C:\Program'  (  )       Ǵ   ܺ     ,            ִ     α׷ ,  Ǵ 
+  ġ         ƴմϴ .
+2025-08-24T07:28:56.374Z [memory] [info] Server transport closed { metadata: undefined }
+2025-08-24T07:28:56.375Z [memory] [info] Client transport closed { metadata: undefined }
+2025-08-24T07:28:56.375Z [memory] [info] Server transport closed unexpectedly, this is likely due to the process exiting early. If you are developing this MCP server you can add output to stderr (i.e. `console.error('...')` in JavaScript, `print('...', file=sys.stderr)` in python) and it will appear in this log. { metadata: undefined }
+2025-08-24T07:28:56.375Z [memory] [error] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging) { metadata: { context: 'connection', stack: undefined } }
+2025-08-24T07:28:56.375Z [memory] [info] Client transport closed { metadata: undefined }
