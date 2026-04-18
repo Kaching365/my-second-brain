@@ -1,0 +1,145 @@
+7-1. Amazon 키워드 & 경쟁 분석 (Market Validation Engine)
+① 목적
+
+사용자가 선택한 주제가 Amazon KDP에서 실제로 출판 가치가 있는지 사전에 판단
+
+"쓰기 전에 검증"을 가능하게 하는 핵심 기능
+
+② 사용자 입력
+
+메인 키워드 1개 (예: "AI prompts for writers")
+
+Amazon 마켓 선택 (US / UK / CA / AU)
+
+③ 시스템 처리 로직
+
+Amazon 검색 결과 상위 N권 수집 (기본 10~20권)
+
+수집 항목
+
+제목 / 부제
+
+카테고리 (BISAC + Amazon 내부)
+
+가격
+
+페이지 수
+
+리뷰 수 / 평점
+
+리뷰 텍스트 요약
+
+1~3점: 불만/결핍
+
+4~5점: 강점/호평
+
+④ 출력 결과 (UI)
+
+경쟁 강도 지수 (Low / Medium / High)
+
+평균 지표
+
+평균 페이지 수
+
+평균 가격
+
+평균 리뷰 수
+
+출판 적합도 Score (0~100)
+
+권장 전략
+
+진입 가능 / 주의 / 비추천
+
+⑤ MVP 범위 제한
+
+실시간 광고 데이터 제외
+
+Sponsored 결과 제외
+
+7-2. Book Blueprint 자동 생성 (Book Architecture Builder)
+① 목적
+
+검증된 키워드를 기반으로 팔릴 확률이 높은 책의 구조를 자동 설계
+
+② 사용자 입력
+
+확정 키워드
+
+책 유형 선택
+
+How-to / Guide / Workbook
+
+독자 수준
+
+Beginner / Intermediate
+
+목표 페이지 수 (예: 120p)
+
+③ 시스템 처리 로직
+
+베스트셀러 목차 패턴 분석
+
+리뷰 기반 필수 챕터 추출
+
+AI 설계 규칙 적용
+
+문제 → 해결 → 적용 → 확장 구조
+
+④ 출력 결과 (UI)
+
+Book Title (SEO 최적화)
+
+Subtitle
+
+Chapter 구조
+
+Chapter Title
+
+Chapter Goal
+
+권장 분량 (페이지)
+
+전체 예상 페이지 수
+
+
+7-3. 챕터 초안 생성 (Chapter Writing Engine)
+① 목적
+
+Blueprint 기반으로 출판 가능한 수준의 챕터 초안 생성
+
+② 사용자 입력
+
+생성할 챕터 선택
+
+Tone
+
+Conversational / Educational
+
+Reading Level
+
+Grade 6~9
+
+③ 시스템 처리 로직
+
+챕터 목적 반영
+
+고정 템플릿 적용
+
+Introduction
+
+Core Content
+
+Bullet Points
+
+Checklist / Summary
+
+중복 표현 제거 로직
+
+④ 출력 결과 (UI)
+
+챕터 초안 (1,500~2,500 words)
+
+수정 가능 에디터
+
+재생성 옵션
