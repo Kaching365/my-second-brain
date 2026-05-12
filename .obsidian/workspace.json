@@ -11,14 +11,12 @@
             "id": "d8fe9522a395558b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "10_Wiki/Topics/Digital Content Creation/AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드.md",
-                "mode": "source",
-                "source": false
+                "file": "00_Raw/AI로 로맨스 소설쓰기.pdf"
               },
-              "icon": "lucide-file",
-              "title": "AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드"
+              "icon": "lucide-file-text",
+              "title": "AI로 로맨스 소설쓰기"
             }
           }
         ]
@@ -183,8 +181,10 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "a91316c11426e83f",
+  "active": "d8fe9522a395558b",
   "lastOpenFiles": [
+    "00_Raw/2026-05-09/테스트_브레인_팩.md",
+    "10_Wiki/Topics/Digital Content Creation/AI_프롬프트_기반_숏폼_콘텐츠_제작_및_수익화_가이드.md",
     "00_Raw/figma desktop.md",
     "10_Wiki/Topics/Digital Product Strategy/정보_상품E-book_시장_검증_및_선판매_구조_설계_프레임워크.md",
     "10_Wiki/Topics/Digital Product Strategy",

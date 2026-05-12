@@ -1,0 +1,28 @@
+{
+  "_migrated": true,
+  "researcher": {
+    "activatedAt": "2026-05-10T14:07:17.992Z"
+  },
+  "business": {
+    "activatedAt": "2026-05-10T14:07:32.677Z"
+  },
+  "instagram": {
+    "activatedAt": "2026-05-10T14:07:37.336Z"
+  },
+  "developer": {
+    "activatedAt": "2026-05-10T14:07:41.169Z"
+  },
+  "secretary": {
+    "activatedAt": "2026-05-12T14:20:38.190Z"
+  },
+  "youtube": {
+    "activatedAt": "2026-05-12T14:20:38.190Z"
+  },
+  "writer": {
+    "activatedAt": "2026-05-12T14:20:38.190Z"
+  },
+  "designer": {
+    "activatedAt": "2026-05-12T14:20:38.190Z"
+  },
+  "_migrated_v2": true
+}
